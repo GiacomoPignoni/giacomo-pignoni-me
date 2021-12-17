@@ -12,7 +12,7 @@ import { MatButtonModule } from "@angular/material/button";
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     ComponentsModule,

@@ -21,7 +21,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/giacomo-pignoni-me",
+            "outputPath": "dist/giacomo-pignoni-me/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -117,6 +117,65 @@
               "src/**/*.html"
             ]
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/giacomo-pignoni-me/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json",
+            "inlineStyleLanguage": "scss"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
+            },
+            "development": {
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "giacomo-pignoni-me:build:development",
+              "serverTarget": "giacomo-pignoni-me:server:development"
+            },
+            "production": {
+              "browserTarget": "giacomo-pignoni-me:build:production",
+              "serverTarget": "giacomo-pignoni-me:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "giacomo-pignoni-me:build:production",
+              "serverTarget": "giacomo-pignoni-me:server:production"
+            },
+            "development": {
+              "browserTarget": "giacomo-pignoni-me:build:development",
+              "serverTarget": "giacomo-pignoni-me:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
