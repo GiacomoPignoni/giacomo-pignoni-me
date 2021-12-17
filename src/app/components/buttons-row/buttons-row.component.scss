@@ -1,0 +1,32 @@
+:host {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+button {
+    margin-right: 15px;
+    position: relative;
+
+    .tooltip {
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: -30px;
+        opacity: 0;
+        transition: all 200ms ease;
+        background: var(--accent-color);
+        color: var(--on-accent-color);
+        padding: 2px 8px;
+        border-radius: 5px;
+    }
+
+    &:hover {
+        .tooltip {
+            visibility: visible;
+            top: -35px;
+            opacity: 1;
+        }
+    }
+}

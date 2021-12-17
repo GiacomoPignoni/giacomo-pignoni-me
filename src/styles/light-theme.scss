@@ -1,0 +1,130 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$light-primary:  (
+    50 : #e8f6ff,
+    100 : #c5e8ff,
+    200 : #9ed9ff,
+    300 : #77c9ff,
+    400 : #5abeff,
+    500 : #3db2ff,
+    600 : #37abff,
+    700 : #2fa2ff,
+    800 : #2799ff,
+    900 : #1a8aff,
+    A100 : #ffffff,
+    A200 : #feffff,
+    A400 : #cbe3ff,
+    A700 : #b2d5ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$light-accent: (
+    50 : #fff6e6,
+    100 : #ffeac1,
+    200 : #ffdc98,
+    300 : #ffcd6e,
+    400 : #ffc34f,
+    500 : #ffb830,
+    600 : #ffb12b,
+    700 : #ffa824,
+    800 : #ffa01e,
+    900 : #ff9113,
+    A100 : #ffffff,
+    A200 : #fffcfa,
+    A400 : #ffe3c7,
+    A700 : #ffd6ad,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$light-warn: (
+    50 : #ffe5e8,
+    100 : #ffbdc6,
+    200 : #ff92a1,
+    300 : #ff667b,
+    400 : #ff455e,
+    500 : #ff2442,
+    600 : #ff203c,
+    700 : #ff1b33,
+    800 : #ff162b,
+    900 : #ff0d1d,
+    A100 : #ffffff,
+    A200 : #fff6f7,
+    A400 : #ffc3c6,
+    A700 : #ffaaae,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$light-primary-palette: mat.define-palette($light-primary, 500);
+$light-accent-palette: mat.define-palette($light-accent);
+$light-warn-palette: mat.define-palette($light-warn);
+
+$light-theme: mat.define-light-theme((
+ color: (
+   primary: $light-primary-palette,
+   accent: $light-accent-palette,
+   warn: $light-warn-palette
+ )
+));
+
+:root {
+    .light-theme {
+        @include mat.all-component-themes($light-theme);
+
+        --background-color: grey;
+        --light-color: white;
+        --shadow-color: #5F6368;
+        --text-color: #5F6368;
+
+        --primary-color: #3db2ff;
+        --on-primary-color: #ffffff;
+        --accent-color: #ffb830;
+        --on-accent-color: #ffffff;        
+    }
+}
