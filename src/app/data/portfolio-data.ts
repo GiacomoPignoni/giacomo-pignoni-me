@@ -7,6 +7,6 @@ export const portfolioItems: PortfolioItem[] = [
         ],
         title: "Test",
         text: "Test Text",
-        imagePath: "assets/images/ciao.png" 
+        imagePath: "assets/images/ciao.png"
     }
-]
+];

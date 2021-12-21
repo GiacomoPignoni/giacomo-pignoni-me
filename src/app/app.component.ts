@@ -19,6 +19,6 @@ export class AppComponent {
   }
 
   public prepareRoute(outlet: RouterOutlet) {
-    return outlet?.activatedRouteData?.['animation'];
+    return outlet?.activatedRouteData?.["animation"];
   }
 }
