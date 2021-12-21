@@ -1,3 +1,7 @@
+*, *::before, *::after {
+  box-sizing: content-box;
+}
+
 html, body {
   margin: 0;
   width:  100%;
@@ -9,6 +13,14 @@ body {
   transition: all 500ms ease;
   background: var(--background-color);
 
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.primary-color {
+  color: var(--primary-color);
 }

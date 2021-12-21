@@ -2,21 +2,21 @@
 
 @include mat.core();
 
-$light-primary:  (
-    50 : #e8f6ff,
-    100 : #c5e8ff,
-    200 : #9ed9ff,
-    300 : #77c9ff,
-    400 : #5abeff,
-    500 : #3db2ff,
-    600 : #37abff,
-    700 : #2fa2ff,
-    800 : #2799ff,
-    900 : #1a8aff,
-    A100 : #ffffff,
-    A200 : #feffff,
-    A400 : #cbe3ff,
-    A700 : #b2d5ff,
+$light-primary: (
+    50 : #e2f4f3,
+    100 : #b8e5e0,
+    200 : #88d3cb,
+    300 : #58c1b6,
+    400 : #35b4a7,
+    500 : #11a797,
+    600 : #0f9f8f,
+    700 : #0c9684,
+    800 : #0a8c7a,
+    900 : #057c69,
+    A100 : #aaffef,
+    A200 : #77ffe6,
+    A400 : #44ffdc,
+    A700 : #2bffd8,
     contrast: (
         50 : #000000,
         100 : #000000,
@@ -24,9 +24,9 @@ $light-primary:  (
         300 : #000000,
         400 : #000000,
         500 : #ffffff,
-        600 : #000000,
-        700 : #000000,
-        800 : #000000,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
         900 : #ffffff,
         A100 : #000000,
         A200 : #000000,
@@ -117,13 +117,15 @@ $light-theme: mat.define-light-theme((
     .light-theme {
         @include mat.all-component-themes($light-theme);
 
-        --background-color: grey;
+        --background-color: #f2f7f9;
         --light-color: white;
-        --shadow-color: #5F6368;
+        --shadow-color: rgb(0 0 0 / 25%);
         --text-color: #5F6368;
 
-        --primary-color: #3db2ff;
+        --primary-color: #11A797;
         --on-primary-color: #ffffff;
+        --secondary-color: #99E6B2;
+        --on-secondar-color: #ffffff;
         --accent-color: #ffb830;
         --on-accent-color: #ffffff;        
     }
