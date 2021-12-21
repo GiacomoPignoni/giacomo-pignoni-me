@@ -9,23 +9,28 @@ const routes: Routes = [
   },
   {
     path: "home",
-    loadChildren: () => import("src/app/pages/home/home.module").then(m => m.HomeModule)
+    loadChildren: () => import("src/app/pages/home/home.module").then(m => m.HomeModule),
+    data: { animation: "HomePage" }
   },
   {
     path: "about-me",
-    loadChildren: () => import("src/app/pages/about-me/about-me.module").then(m => m.AboutMeModule)
+    loadChildren: () => import("src/app/pages/about-me/about-me.module").then(m => m.AboutMeModule),
+    data: { animation: "AboutPage" }
   },
   {
     path: "resume",
-    loadChildren: () => import("src/app/pages/resume/resume.module").then(m => m.ResumeModule)
+    loadChildren: () => import("src/app/pages/resume/resume.module").then(m => m.ResumeModule),
+    data: { animation: "ResumePage" }
   },
   {
     path: "portfolio",
-    loadChildren: () => import("src/app/pages/portfolio/portfolio.module").then(m => m.PortfolioModule)
+    loadChildren: () => import("src/app/pages/portfolio/portfolio.module").then(m => m.PortfolioModule),
+    data: { animation: "PortfolioPage" }
   },
   {
     path: "contact",
-    loadChildren: () => import("src/app/pages/contact/contact.module").then(m => m.ContactModule)
+    loadChildren: () => import("src/app/pages/contact/contact.module").then(m => m.ContactModule),
+    data: { animation: "ContactPage" }
   }
 ];
 

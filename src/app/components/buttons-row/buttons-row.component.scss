@@ -3,30 +3,41 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-}
 
-button {
-    margin-right: 15px;
-    position: relative;
-
-    .tooltip {
-        visibility: hidden;
-        position: absolute;
-        top: 0;
-        left: -30px;
-        opacity: 0;
+    button {
+        margin: 0px 10px;
+        position: relative;
         transition: all 200ms ease;
-        background: var(--accent-color);
-        color: var(--on-accent-color);
-        padding: 2px 8px;
-        border-radius: 5px;
-    }
-
-    &:hover {
+    
         .tooltip {
-            visibility: visible;
-            top: -35px;
-            opacity: 1;
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: -30px;
+            opacity: 0;
+            transition: all 200ms ease;
+            background: var(--accent-color);
+            color: var(--on-accent-color);
+            padding: 2px 8px;
+            border-radius: 5px;
+            pointer-events: none;
+        }
+    
+        &:hover {
+            .tooltip {
+                visibility: visible;
+                top: -35px;
+                opacity: 1;
+            }
+        }
+
+        &:active {
+            transform: scale(0.9);
+        }
+
+        &.active {
+            transform: scale(1.2);
         }
     }
 }
+

@@ -6,9 +6,10 @@ import { Component, Output, EventEmitter } from "@angular/core";
   styleUrls: ["./sidebar.component.scss"]
 })
 export class SidebarComponent {
+
   @Output() linkClick: EventEmitter<void> = new EventEmitter();
 
-  onLinkClicked() {
+  public onLinkClicked() {
     this.linkClick.emit();
   }
 }
