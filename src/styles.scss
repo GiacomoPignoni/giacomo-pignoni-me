@@ -23,7 +23,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .primary-color {
-  color: var(--primary-color);
+  background-color: #f3ec78;
+  background-image:  linear-gradient(-5deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+  background-size: 100%;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
 }
 
 .row {
