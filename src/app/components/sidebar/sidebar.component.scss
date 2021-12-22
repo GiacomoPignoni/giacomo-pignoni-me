@@ -13,6 +13,7 @@ $padding: 15px;
     box-shadow: 0 0 100px -5px var(--shadow-color);
     flex-flow: column;
     z-index: 2;
+    overflow: auto;
 
     .photo-row {
         display: flex;
