@@ -1,1 +1,12 @@
 <h1>Portfolio</h1>
+
+<div class="categories-row">
+  <a (click)="selectCategory(category)" [ngClass]="{'category-link': true, 'active': selectedCategory === category}" *ngFor="let category of categories">{{category}}</a>
+</div>
+
+<div class="row portfolio-items-container">
+  <div class="col-sm-4 col-xs-12 portfolio-item" *ngFor="let item of portfolioItems; index as i" (click)="goToDetails(i)">
+    <img [src]="item.images[0]" [alt]="item.title" class="img-fluid">
+    <label class="title">{{item.title}}</label>
+  </div>
+</div>

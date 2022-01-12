@@ -1,12 +1,42 @@
-import { PortfolioCategory, PortfolioItem } from "src/app/models/portfolio-models";
+import { PortfolioItem } from "src/app/models/portfolio-models";
+
+export const categories: string [] = ["All", "Side Project", "Work", "Open Source"];
 
 export const portfolioItems: PortfolioItem[] = [
     {
-        categories: [
-            PortfolioCategory.freelance
-        ],
-        title: "Test",
-        text: "Test Text",
-        imagePath: "assets/images/ciao.png"
+        date: "01-01-2022",
+        images: ["assets/images/modi/logo.jpg"],
+        link: "https://modi-app.online",
+        technologies: ["Flutter", "Firebase", "NodeJS"],
+        text: "Modi - Mood Diary",
+        title: "Modi - Mood Diary",
+        categories: ["Side Project"]
+    },
+    {
+        date: "01-01-2022",
+        images: [],
+        link: "https://modi-app.online",
+        technologies: ["Flutter", "Firebase", "NodeJS"],
+        text: "Modi - Mood Diary",
+        title: "Modi - Mood Diary",
+        categories: ["Side Project"]
+    },
+    {
+        date: "01-01-2022",
+        images: [],
+        link: "https://modi-app.online",
+        technologies: ["Flutter", "Firebase", "NodeJS"],
+        text: "Modi - Mood Diary",
+        title: "Modi - Mood Diary",
+        categories: ["Side Project"]
+    },
+    {
+        date: "01-01-2022",
+        images: [],
+        link: "https://modi-app.online",
+        technologies: ["Flutter", "Firebase", "NodeJS"],
+        text: "Modi - Mood Diary",
+        title: "Modi - Mood Diary",
+        categories: ["Side Project"]
     }
 ];

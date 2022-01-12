@@ -1,12 +1,10 @@
-export enum PortfolioCategory {
-    openSource = 0,
-    freelance = 1,
-    sideProject = 2
-}
-
 export interface PortfolioItem {
-    categories: PortfolioCategory[];
     title: string;
     text: string;
-    imagePath: string;
+    images: string[];
+    videoLink?: string;
+    link: string;
+    date: string;
+    technologies: string[];
+    categories: string[];
 }

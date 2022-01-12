@@ -1,1 +1,41 @@
-<h1>Resume</h1>
+<h2>Resume</h2>
+
+<div class="row">
+  <div class="col-sm-8 col-xs-12">
+    <h4>Experience</h4>
+    <div class="experience-container">
+      <div class="experience-row" *ngFor="let work of works">
+        <div class="experience-left">
+          <div class="time">{{work.time}}</div>
+          <div class="company">{{work.company}}</div>
+        </div>
+        <div class="experience-divider"></div>
+        <div class="experience-right">
+          <h6>{{work.title}}</h6>
+          <p [innerHTML]="work.text"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 col-xs-12 text">
+    <h4>Coding <span class="primary-color">Skill</span></h4>
+    <div class="skills-container">
+      <div class="skill" *ngFor="let skill of skills">
+        <div class="skill-text">
+          <label class="skill-name">{{skill.name}}</label>
+          <label class="skill-percentage">{{skill.percentage}}%</label>
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-bar" [style.width.%]="skill.percentage"></div>
+        </div>
+      </div>
+    </div>
+
+    <h4>Knowledges</h4>
+    <div class="knowledges-container">
+      <div class="knowledge" *ngFor="let knowledge of knowledges">
+        {{knowledge}}
+      </div>
+    </div>
+  </div>
+</div>
