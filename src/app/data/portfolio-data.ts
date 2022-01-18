@@ -4,7 +4,7 @@ export const categories: string [] = ["All", "Side Project", "Work", "Open Sourc
 
 export const portfolioItems: PortfolioItem[] = [
     {
-        date: "01-01-2022",
+        date: "Jan 1, 2022",
         cover: "assets/images/modi/cover.png",
         images: [
             "assets/images/modi/phone_1.png",
@@ -25,7 +25,7 @@ export const portfolioItems: PortfolioItem[] = [
         categories: ["Side Project"]
     },
     {
-        date: "10-09-2021",
+        date: "Sep 10, 2021",
         cover: "assets/images/automotive-dealer-day/cover.png",
         images: [
             "assets/images/automotive-dealer-day/phone_1.png",
@@ -45,7 +45,7 @@ export const portfolioItems: PortfolioItem[] = [
         categories: ["Work"]
     },
     {
-        date: "04-15-2021",
+        date: "Apr 15, 2021",
         cover: "assets/images/habits-diary/cover.png",
         images: [
             "assets/images/habits-diary/phone_1.png",
@@ -64,7 +64,7 @@ export const portfolioItems: PortfolioItem[] = [
         categories: ["Side Project", "Open Source"]
     },
     {
-        date: "01-02-2022",
+        date: "Feb 1, 2022",
         cover: "assets/images/giacomo-pignoni-website/cover.png",
         images: [
             "assets/images/giacomo-pignoni-website/desktop_1.png",
