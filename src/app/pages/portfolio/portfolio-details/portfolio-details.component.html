@@ -1,1 +1,45 @@
-<p>portfolio-details works!</p>
+<div class="top-buttons-row">
+  <button mat-mini-fab color="accent" aria-label="Back" title="Back" (click)="goBack()">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+</div>
+
+<h2>{{firstWord}}<span class="primary-color">{{otherWord}}</span></h2>
+
+<div class="row main-container">
+  <div class="col-sm-7 col-xs-12 photos-container">
+    <img [src]="portfolioItem.images[currentImageIndex]">
+    <div class="photos-buttons">
+      <button mat-mini-fab color="accent" aria-label="Before image" title="Before image" (click)="beforeImage()">
+        <mat-icon>chevron_left</mat-icon>
+      </button>
+      <button mat-mini-fab color="accent" aria-label="Next image" title="Next image" (click)="nextImage()">
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div class="col-sm-5 col-xs-12 info-container">
+    <div class="info">
+      <label>Date</label>
+      <p>{{portfolioItem.date | date:'MMM d, y'}}</p>
+    </div>
+
+    <div class="info">
+      <label>Link</label>
+      <a [href]="portfolioItem.link">{{portfolioItem.link}}</a>
+    </div>
+
+    <div class="info">
+      <label>Technologies</label>
+      <div class="technology-chips-container">
+        <div class="technology-chip" *ngFor="let technology of portfolioItem.technologies">{{technology}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 text-container">
+    <p [innerHTML]="portfolioItem.text"></p>
+  </div>
+</div>

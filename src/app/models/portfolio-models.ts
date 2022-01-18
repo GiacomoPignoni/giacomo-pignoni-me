@@ -1,6 +1,7 @@
 export interface PortfolioItem {
     title: string;
     text: string;
+    cover: string;
     images: string[];
     videoLink?: string;
     link: string;
