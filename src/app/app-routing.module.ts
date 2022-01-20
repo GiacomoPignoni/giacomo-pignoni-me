@@ -26,11 +26,6 @@ const routes: Routes = [
     path: "portfolio",
     loadChildren: () => import("src/app/pages/portfolio/portfolio.module").then(m => m.PortfolioModule),
     data: { animation: "PortfolioPage" }
-  },
-  {
-    path: "contact",
-    loadChildren: () => import("src/app/pages/contact/contact.module").then(m => m.ContactModule),
-    data: { animation: "ContactPage" }
   }
 ];
 
